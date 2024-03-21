@@ -6,5 +6,6 @@ export default class ExploreMath extends LightningElement {
     @api 
     calculate(totalAmount, taxPercentage){
         this.totalTaxableAmount = (totalAmount * taxPercentage)/100
+        return this.totalTaxableAmount;
     }
 }

@@ -1,0 +1,10 @@
+<template>
+    <lightning-input label="Todo" value={todo} onchange={handleChange}></lightning-input>
+    <lightning-button label="Create Todo" onclick={hanldeClick}></lightning-button>
+
+    <ul>
+        <template for:each={todoArray} for:item="item">
+            <li key={item.Id}>{item.name}</li>
+        </template>
+    </ul>
+</template>

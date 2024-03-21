@@ -10,10 +10,12 @@ export default class ExploreCalculator extends LightningElement {
            this.totalAmount = event.target.value;
         }
 
-        if(field === "totalPercentage"){
+        if(field === "taxPercentage"){
             this.taxPercentage = event.target.value;
          }
-
-         this.template.querySelector("c-explore-math").calculate(this.totalAmount, this.taxPercentage);
+         if(this.totalAmount !== undefined && this.taxPercentage !== undefined){
+            this.template.querySelector("c-explore-math").calculate(this.totalAmount, this.taxPercentage);
+            
+         }
     }
 }
