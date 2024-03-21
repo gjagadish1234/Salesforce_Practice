@@ -1,0 +1,14 @@
+<template>
+    Car Iteration Using For:each
+       <ul>
+        <template for:each={cars} for:item="car">
+            <li key={car.Id}>{car.Name} is a {car.Colour} car</li>
+        </template>
+       </ul>
+    Car Iteration Using iterator  
+    <ul>
+        <template iterator:it={cars}>
+            <li key={it.value.Id}>{it.value.Name} is a {it.value.Colour} car</li>
+        </template>
+       </ul>
+</template>
