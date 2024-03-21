@@ -17,6 +17,7 @@ export default class ExploreTodoList extends LightningElement {
         todoObj.name = this.todo;
        // this.todoArray.push(todoObj);
         this.todoArray.unshift(todoObj);
+        console.log('Entered');
         console.log(this.todoArray);
     }
 
